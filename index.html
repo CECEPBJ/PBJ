@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-Month Anniversary Surprise</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .content { display: none; margin-top: 20px; }
+        .agenda-item { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our 6-month anniversary surprise!</h1>
+    <p>To begin, please enter the password. Hint: It's the date we got together.</p>
+    <input type="password" id="gate-password" placeholder="Enter password">
+    <button onclick="checkGatePassword()">Submit</button>
+    
+    <div id="agenda" class="content">
+        <h2>Encrypted Agenda</h2>
+
+        <div class="agenda-item">
+            <button onclick="checkAgendaPassword('lego', 'LEGO')">Lego Flowers</button>
+            <div id="lego" class="content">
+                <p>My Love,</p>
+                <p>Over the past six months, we've built something truly special together, brick by brick, just like our Lego vase. Each flower we add represents a lesson we've learned: understanding, compassion, tolerance, loving each other better, and taking care of each other more. As we pick up new Lego flowers today, let's celebrate these lessons and look forward to adding many more to our vase.</p>
+                <p>With all my love,<br>Awan/Your PB</p>
+            </div>
+        </div>
+
+        <div class="agenda-item">
+            <button onclick="checkAgendaPassword('breakfast', 'PolarFrost')">Breakfast at Pasar Kranggan</button>
+            <div id="breakfast" class="content">
+                <p>Let's take a trip down memory lane and start our day with a breakfast that reminisces our first date. We'll visit Pasar Kranggan and enjoy the things we hold dear from that special day. It's a beautiful reminder of how it all began and how far we've come.</p>
+                <p>Yours always,<br>Awan/Your PB</p>
+            </div>
+        </div>
+
+        <div class="agenda-item">
+            <button onclick="checkAgendaPassword('nature', 'PBtoJ')">Visit to Nature</button>
+            <div id="nature" class="content">
+                <p>On this road,<br>
+                We come and go, day by day,<br>
+                On this road, let's leave behind<br>
+                Every memory, everything we found.<br>
+                Nature, like love, needs no words,<br>
+                Just our hearts to understand its calls.<br>
+                Together we wander, together we stay,<br>
+                As one with the earth, our love will never sway.</p>
+                <p>- Mahmoud Darwish</p>
+            </div>
+        </div>
+
+        <div class="agenda-item">
+            <button onclick="checkAgendaPassword('dinner', 'JtoPB')">Dinner and Deep Conversation</button>
+            <div id="dinner" class="content">
+                <p>Tonight, let's sit down for a wonderful dinner and have a heart-to-heart talk. We'll discuss how we can navigate our relationship towards our anniversary, what we want to improve, and what we need to learn and understand better. This dinner is a toast to our future and the love we continue to build.</p>
+                <p>Forever yours,<br>Awan/Your PB</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkGatePassword() {
+            var gatePassword = document.getElementById('gate-password').value;
+            if (gatePassword === '06012024') {
+                document.getElementById('agenda').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        function checkAgendaPassword(agendaId, password) {
+            var inputPassword = prompt('Enter password for this agenda:');
+            if (inputPassword === password) {
+                document.getElementById(agendaId).style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
